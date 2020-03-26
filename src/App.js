@@ -119,14 +119,6 @@ export default class App extends Component {
       })
     }
 
-    // mark as not completed function
-    MarkAsNotCompleted = () => {
-      this.setState({
-        isCompleted: false // set this isCompleted state as false
-      })
-    }
-
- 
     render() {
         return (
             <div>
@@ -137,7 +129,6 @@ export default class App extends Component {
                   </div>
 
                   <div class="row">
-                      {/* Component */}
                       <TaskInput 
                         task={this.state.task} 
                         isCompleted={this.state.isCompleted} 
@@ -145,7 +136,6 @@ export default class App extends Component {
                         onSubmit={this.onSubmit} 
                         editItem={this.state.editItem} 
                         MarkAsCompleted={this.MarkAsCompleted} 
-                        MarkAsNotCompleted={this.MarkAsNotCompleted} 
                       />
 
                       <TaskList 

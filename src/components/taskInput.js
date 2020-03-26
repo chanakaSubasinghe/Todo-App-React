@@ -5,7 +5,7 @@ export default class TaskInput extends Component{
     render() {
 
         // assigning variables using props
-        const {task, isCompleted, handleChange, onSubmit, editItem, MarkAsCompleted , MarkAsNotCompleted} = this.props
+        const {task, isCompleted, handleChange, onSubmit, editItem, MarkAsCompleted} = this.props
 
         return(
             <div class="col-md-6 my-5">
@@ -26,7 +26,7 @@ export default class TaskInput extends Component{
                                                        
                                 <div>
                                     {isCompleted 
-                                        ?   <button type="button" className='btn btn-danger btn-block btn-sm my-3' onClick={() => MarkAsNotCompleted()}>Completed</button>
+                                        ?   <button type="button" className='btn btn-danger btn-block btn-sm my-3'>Completed</button>
                                         :   <button type="button" className='btn btn-warning btn-block btn-sm my-3' onClick={() => MarkAsCompleted()}>Mark as Completed</button>
                                     }
                                     
