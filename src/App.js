@@ -40,7 +40,8 @@ export default class App extends Component {
 
     // on submit function
     onSubmit = (e) => {
-      e.preventDefault()
+
+      e.preventDefault() // avoiding refresh
 
       // creating a new task provided by user
       const newTask = {
